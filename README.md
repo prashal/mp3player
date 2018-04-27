@@ -16,8 +16,6 @@ To download the release you can goto [Release](../../releases/latest)
 
 Snapshots :
 
-1. Number Puzzle, Easy Mode -
-
 ![Alt text](snapshots/snapshot.png?raw=true "MP3 Player")
 
 
