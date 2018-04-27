@@ -1,0 +1,245 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_PLAYER MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open...                                   Ctrl+O", 
+                                                IDM_FILEOPEN
+        MENUITEM "Open &URL...                            Ctrl+U", 
+                                                IDM_OPENURLFILE
+        MENUITEM SEPARATOR
+        MENUITEM "Open &PlayList...",           IDM_OPENPLAYLIST
+        MENUITEM "&Save Current Playing list",  IDM_SAVECURRENTPLAYLIST
+        MENUITEM "Save &Current Playing list As", IDM_SAVECURRENTPLAYLISTAS
+        MENUITEM SEPARATOR
+        POPUP "Add to Library"
+        BEGIN
+            MENUITEM "Add Files...",                IDM_ADDLIBRARYFILE
+            MENUITEM "Add PlayList...",             IDM_ADDLIBRARYPLAYLIST
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit                                          Alt+F4", 
+                                                IDM_EXIT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About ...",                  IDM_ABOUT
+    END
+END
+
+IDR_CURRENTPLAYLISTPOPUP MENU DISCARDABLE 
+BEGIN
+    POPUP "Pop-up"
+    BEGIN
+        MENUITEM "Play                           Return", IDM_PLAYENTER
+        MENUITEM SEPARATOR
+        MENUITEM "Add Files      ",             IDM_ADDFILECURRENTPLAYLIST
+        MENUITEM "Delete File      ",           IDM_DELETEFILECURRENTPLAYLIST
+
+        MENUITEM SEPARATOR
+        MENUITEM "Open Playlist",               IDM_OPENPLAYLIST
+        MENUITEM "Save Playlist",               IDM_SAVECURRENTPLAYLIST
+        MENUITEM "Save Playlist As",            IDM_SAVECURRENTPLAYLISTAS
+    END
+END
+
+IDR_PLAYLISTPOPUP MENU DISCARDABLE 
+BEGIN
+    POPUP "pop-up"
+    BEGIN
+        MENUITEM "Play",                        IDM_PLAYPLAYLIST
+        MENUITEM SEPARATOR
+        MENUITEM "Delete Playlist",             IDM_DELETELIBRARYPLAYLIST
+        MENUITEM "Add Playlist",                IDM_ADDLIBRARYPLAYLIST
+    END
+END
+
+IDR_LIBRARYPOPUP MENU DISCARDABLE 
+BEGIN
+    POPUP "pop-up"
+    BEGIN
+        MENUITEM "Play",                        IDM_PLAYSONGFROMLIBRARY
+        MENUITEM SEPARATOR
+        MENUITEM "Set Rating",                  IDM_SETRATING
+        MENUITEM "Add Song",                    IDM_ADDLIBRARYFILE
+        MENUITEM "Delete Song",                 IDM_DELETELIBRARYFILE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_PLAYER ACCELERATORS MOVEABLE PURE 
+BEGIN
+    "/",            IDM_ABOUT,              ASCII,  ALT, NOINVERT
+    "?",            IDM_ABOUT,              ASCII,  ALT, NOINVERT
+    "O",            IDM_FILEOPEN,           VIRTKEY, CONTROL, NOINVERT
+    "U",            IDM_OPENURLFILE,        VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  22, 17, 228, 81
+STYLE DS_MODALFRAME | DS_CENTER | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "System"
+BEGIN
+    LTEXT           "player Version 1.0",IDC_STATIC,49,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2008",IDC_STATIC,49,20,119,8
+    DEFPUSHBUTTON   "OK",ID_OK,172,7,30,11,WS_GROUP
+    LTEXT           "Author - Prasanta Halder",IDC_STATIC,119,31,100,8
+    LTEXT           "For more information and technical problem contract \n\t\t\t prasanta006@gmail.com",
+                    IDC_STATIC,32,48,184,22
+    ICON            IDI_ICON1,IDC_STATIC,13,11,20,20
+END
+
+IDD_DIALOGOPENURL DIALOG DISCARDABLE  0, 0, 305, 94
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Open URL..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",ID_OK,138,73,50,14
+    PUSHBUTTON      "Cancel",ID_CANCEL,192,73,50,14
+    EDITTEXT        IDC_URLFILENAME,49,47,245,15,ES_AUTOHSCROLL
+    ICON            IDI_PLAYER,IDC_STATIC,15,18,20,20
+    PUSHBUTTON      "Browse...",ID_BROWSEURLFILE,247,73,50,14
+    LTEXT           "Open :",IDC_STATIC,16,47,31,14
+    LTEXT           "Enter the URL or path to the MP3 on your computer that you want to play .",
+                    IDC_STATIC,46,23,246,12
+END
+
+IDD_DIALOGSETRATINGS DIALOG DISCARDABLE  0, 0, 300, 74
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Set Ratings :"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",ID_OK,241,56,50,14
+    PUSHBUTTON      "Cancel",ID_CANCEL,182,56,50,14
+    LTEXT           "Rating :",IDC_STATIC,22,50,31,14
+    COMBOBOX        IDC_COMBORATINGS,65,50,62,198,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Static",IDC_STATICFILENAME,7,20,283,21
+    LTEXT           "File Path :-",IDC_STATIC,7,2,82,12
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""resource.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DIALOGOPENURL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 297
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_DIALOGSETRATINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 297
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 70
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_PLAYER              ICON    DISCARDABLE     "icon\\wi0096-64.ico"
+IDI_ICON1               ICON    DISCARDABLE     "icon\\ac0036-64.ico"
+IDI_ICON2               ICON    DISCARDABLE     "icon\\Mp-wp.ico"
+IDI_ICON3               ICON    DISCARDABLE     "icon\\wi0064-64.ico"
+IDI_ICON4               ICON    DISCARDABLE     "icon\\wi0122-64.ico"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
