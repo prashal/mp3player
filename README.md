@@ -1,6 +1,6 @@
 # MP3 Player
 Simple MP3 player with playlist and library. This project is done as summer project during my graduation.
-It demonstrate the use of Windows Multimedia SDK, Win32 GUI and custom data structure.
+It demonstrates the use of Windows Multimedia SDK, Win32 GUI and custom data structure.
 
 Compile :
 
