@@ -16,7 +16,7 @@ To download the release you can goto [Release](../../releases/latest)
 
 Snapshots :
 
-![Alt text](snapshots/snapshot.png?raw=true "MP3 Player")
+![MP3 Player Snapshot](snapshots/snapshot.png?raw=true "MP3 Player")
 
 
 -Prasanta Halder
